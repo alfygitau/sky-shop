@@ -1,0 +1,25 @@
+.product-description{
+    width: 60%;
+    height: 80vh;
+    /* border: 1px solid black; */
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    display: flex;
+    
+}
+.image img{
+    width:400px;
+    height: 70vh;
+    padding: 30px;
+}
+.other-details h5{
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.other-details h6{
+    padding-top: 20px;
+}
+.price{
+    padding-bottom: 20px;
+}
