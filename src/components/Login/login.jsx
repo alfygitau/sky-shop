@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { loginInitiate } from "../../redux/Actions/userActions";
 import "./login.css";
 
 const Login = () => {
+  const dispatch = useDispatch();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const data = { email, password };
+  console.log(data);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(loginInitiate(email, password));
+  };
+
   return (
     <div className="login-container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
@@ -22,6 +38,8 @@ const Login = () => {
           <label for="exampleInputPassword1">Password</label>
           <input
             type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             className="form-control"
             id="exampleInputPassword1"
             placeholder="Password"

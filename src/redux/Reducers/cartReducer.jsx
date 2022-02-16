@@ -2,8 +2,8 @@ import { ADD_TO_CART, REMOVE_FROM_CART } from "../ActionTypes/actionTypes";
 
 const initialState = {
   cartItems: [],
-//   cartLength: 0,
-//   total: 0,
+  cartLength: 0,
+  total: 0,
 };
 
 export const CartReducer = (state = initialState, action) => {
