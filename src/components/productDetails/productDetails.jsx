@@ -30,7 +30,7 @@ const ProductDetails = () => {
         <h6>Category: {product.category}</h6>
         <span className="price">Price: $ {product.price}</span>
         <p>Description: {product.description}</p>
-        <button type="button" class="btn btn-outline-info">
+        <button type="button" className="btn btn-outline-info">
           BUY NOW
         </button>
       </div>

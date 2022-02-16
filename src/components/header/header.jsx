@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 import { BsCart4 } from "react-icons/bs";
-import { FiLogIn } from 'react-icons/fi';
-import { FiUserPlus } from 'react-icons/fi';
+import { FiLogIn } from "react-icons/fi";
+import { FiUserPlus } from "react-icons/fi";
 
 const Header = () => {
   return (
@@ -31,22 +31,25 @@ const Header = () => {
           <li>
             <Link to="/login">
               <button type="submit" className="btn btn-primary mr-4">
-                Login | <FiLogIn/>
+                Login | <FiLogIn />
               </button>
             </Link>
           </li>
           <li>
             <Link to="/register">
               <button type="submit" className="btn btn-primary mr-4">
-                Register | <FiUserPlus/>
+                Register | <FiUserPlus />
               </button>
             </Link>
           </li>
           <li>
-              <Link to='/cart'>
-            <span>
-              <BsCart4 className="cart" />
-            </span>
+            <Link to="/cart">
+              <span>
+                <i>
+                  <BsCart4 className="cart" />
+                  <span className="badge badge-success">1</span>
+                </i>
+              </span>
             </Link>
           </li>
         </ul>

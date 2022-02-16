@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Cart from "./components/cart/cart";
 import Header from "./components/header/header";
 import Homepage from "./components/Home/homepage";
 import Login from "./components/Login/login";
@@ -10,15 +11,16 @@ function App() {
   return (
     <div>
       <Header />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route
-            path="/productdetails/:product_id"
-            element={<ProductDetails />}
-          />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/productdetails/:product_id"
+          element={<ProductDetails />}
+        />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </div>
   );
 }

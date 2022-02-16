@@ -23,7 +23,6 @@ const ProductList = () => {
   const filteredElectronics = products.filter((product) => {
     return product.category === "electronics";
   });
-  console.log(filteredElectronics);
   const filteredJewelery = products.filter((product) => {
     return product.category === "jewelery";
   });
@@ -33,6 +32,10 @@ const ProductList = () => {
   const filteredWomenClothing = products.filter((product) => {
     return product.category === `women's clothing`;
   });
+
+  useEffect(() => {
+    setfilteredProducts(products);
+  }, [products]);
 
   function showA() {
     setfilteredProducts(products);
